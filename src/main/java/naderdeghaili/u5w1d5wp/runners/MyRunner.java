@@ -3,12 +3,15 @@ package naderdeghaili.u5w1d5wp.runners;
 
 import lombok.extern.slf4j.Slf4j;
 import naderdeghaili.u5w1d5wp.entities.PostazioneTipo;
+import naderdeghaili.u5w1d5wp.exceptions.ValidationException;
 import naderdeghaili.u5w1d5wp.services.EdificioService;
 import naderdeghaili.u5w1d5wp.services.PostazioneService;
 import naderdeghaili.u5w1d5wp.services.PrenotazioneService;
 import naderdeghaili.u5w1d5wp.services.UtenteService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 @Slf4j
@@ -58,11 +61,25 @@ public class MyRunner implements CommandLineRunner {
 //        ps.savePrenotazione(1L, 3L, LocalDate.now().plusDays(1));
 
 
-//        Edificio e2DB = es.findById(2L);
-//        Postazione p2DB = pos.findById(2L);
-//        Utente u2DB = us.findById(2L);
-
+        //ricerca per tipo postazione e città
         log.info(pos.getByTipoAndCitta(PostazioneTipo.OPENSPACE, "Padova").toString());
+
+
+        //verifica prenotazione stesso giorno stesso utente
+        try {
+            ps.savePrenotazione(1L, 3L, LocalDate.now());
+        } catch (ValidationException ex) {
+            log.error(ex.getMessage());
+
+        }
+
+
+        //verifica prenotazione stessa postazione
+        try {
+            ps.savePrenotazione(2L, 3L, LocalDate.now().plusDays(1));
+        } catch (ValidationException ex) {
+            log.error(ex.getMessage());
+        }
 
 
     }
