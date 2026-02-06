@@ -61,8 +61,8 @@ public class Utente {
     //toString
     @Override
     public String toString() {
-        return "Utente:" +
-                " | id: " + id +
+        return "Utente: " +
+                "id: " + id +
                 " | username: " + username +
                 " | nomeCognome: " + nomeCognome +
                 " | email: " + email

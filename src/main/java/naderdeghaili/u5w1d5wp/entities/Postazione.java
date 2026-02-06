@@ -76,11 +76,13 @@ public class Postazione {
     @Override
     public String toString() {
         return "Postazione: " +
-                " | id: " + id +
+                "id: " + id +
                 " | descrizione: " + descrizione +
                 " | tipo: " + tipo +
                 " | occupantiMassimi: " + occupantiMassimi +
-                " | edificio: " + edificio.getNome()
+                " | edificio: " + edificio.getNome() +
+                " | città: " + edificio.getCitta()
+
                 ;
     }
 }

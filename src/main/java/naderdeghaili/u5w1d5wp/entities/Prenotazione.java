@@ -69,7 +69,7 @@ public class Prenotazione {
     @Override
     public String toString() {
         return "Prenotazione: " +
-                " | id: " + id +
+                "id: " + id +
                 " | data: " + data +
                 " | id postazione: " + postazione.getId() +
                 " | tipo postazione: " + postazione.getTipo() +
