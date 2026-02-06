@@ -1,0 +1,1 @@
+![diagramma SQL] (gestionePrenotazioniSQL.png)
