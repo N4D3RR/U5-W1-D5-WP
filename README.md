@@ -1,1 +1,1 @@
-![diagramma SQL] (gestionePrenotazioniSQL.png)
+![diagramma SQL](gestionePrenotazioniSQL.png)
