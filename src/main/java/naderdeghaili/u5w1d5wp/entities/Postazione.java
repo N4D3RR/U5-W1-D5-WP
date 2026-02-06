@@ -77,10 +77,10 @@ public class Postazione {
     public String toString() {
         return "Postazione: " +
                 " | id: " + id +
-                " | descrizione='" + descrizione +
-                " | tipo=" + tipo +
-                " | occupantiMassimi=" + occupantiMassimi +
-                " | edificio=" + edificio.getNome()
+                " | descrizione: " + descrizione +
+                " | tipo: " + tipo +
+                " | occupantiMassimi: " + occupantiMassimi +
+                " | edificio: " + edificio.getNome()
                 ;
     }
 }

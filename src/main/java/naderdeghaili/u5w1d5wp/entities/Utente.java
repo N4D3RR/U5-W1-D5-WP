@@ -27,7 +27,7 @@ public class Utente {
         this.email = email;
     }
 
-    
+
     //getter e setter
     public Long getId() {
         return id;
@@ -62,10 +62,10 @@ public class Utente {
     @Override
     public String toString() {
         return "Utente:" +
-                "id:" + id +
-                " | username: '" + username +
-                " | nomeCognome: '" + nomeCognome +
-                " | email: '" + email
+                " | id: " + id +
+                " | username: " + username +
+                " | nomeCognome: " + nomeCognome +
+                " | email: " + email
                 ;
     }
 }

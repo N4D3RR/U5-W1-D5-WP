@@ -70,7 +70,7 @@ public class Prenotazione {
     public String toString() {
         return "Prenotazione: " +
                 " | id: " + id +
-                " | data=" + data +
+                " | data: " + data +
                 " | id postazione: " + postazione.getId() +
                 " | tipo postazione: " + postazione.getTipo() +
                 " | id utente: " + utente;

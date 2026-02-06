@@ -61,10 +61,10 @@ public class Edificio {
     //toString
     @Override
     public String toString() {
-        return "Edificio:" +
-                " nome: '" + nome +
+        return "Edificio: " +
+                " | nome: " + nome +
                 " | id: " + id +
-                " | indirizzo:" + indirizzo +
-                " | citta: '" + citta;
+                " | indirizzo: " + indirizzo +
+                " | citta: " + citta;
     }
 }
